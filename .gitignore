@@ -1,0 +1,10 @@
+# Raw data
+data/
+
+# SQLite database
+f1.db
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store

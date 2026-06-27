@@ -1,7 +1,7 @@
 # F1 SQL Analysis (Modern Era: 2010-2024)
 
 SQL-based analysis of Formula 1 race data using the Ergast F1 dataset.
-Covers driver performance, constructor battles, qualifying trends, pit stop strategy, championship battles, and circuit analysis — all visualized in an interactive self-contained dashboard.
+Covers driver performance, constructor battles, qualifying trends, pit stop strategy, championship battles, and circuit analysis, all visualized in an interactive self-contained dashboard.
 
 ---
 
@@ -9,7 +9,7 @@ Covers driver performance, constructor battles, qualifying trends, pit stop stra
 
 17 SQL queries across 6 analytical modules, written in SQLite and organized by topic. All queries are logged in `QUERY_LOG.md` alongside mistakes made and patterns learned.
 
-A Python pipeline extracts query results into JSON, then builds a fully self-contained `dashboard.html` — no server, no dependencies, just open the file in a browser.
+A Python pipeline extracts query results into JSON, then builds a fully self-contained `dashboard.html` with no server or dependencies: just open the file in a browser.
 
 ---
 
