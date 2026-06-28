@@ -17,7 +17,7 @@ Covers driver performance, constructor battles, qualifying trends, pit stop stra
 
 ## What This Project Does
 
-17 SQL queries across 6 analytical modules, written in SQLite and organized by topic. All queries are logged in `QUERY_LOG.md` alongside mistakes made and patterns learned.
+17 SQL queries across 6 analytical modules, written in SQLite and organized by topic. The queries live as standalone files in `queries/` (one file per module) and are also logged in `QUERY_LOG.md` alongside mistakes made and patterns learned.
 
 A Python pipeline extracts query results into JSON, then builds a fully self-contained `dashboard.html` with no server or dependencies: just open the file in a browser.
 
@@ -32,8 +32,9 @@ A Python pipeline extracts query results into JSON, then builds a fully self-con
 
 3. Run the setup script to load everything into a local SQLite database:
    ```bash
-   pip install pandas
+   pip install -r requirements.txt
    python setup.py
+   python validate.py   # optional: run 17 data-quality checks
    ```
    This creates `f1.db` in the project root.
 
@@ -166,8 +167,12 @@ Then open `dashboard.html` in any browser.
 ```
 F1 SQL Analysis/
 ├── README.md
+├── CHANGES.md             # Log of repo improvements
 ├── QUERY_LOG.md           # All 17 queries + mistakes + patterns learned
+├── requirements.txt       # Python dependencies
+├── queries/               # The 17 queries as standalone .sql files (per module)
 ├── setup.py               # Loads CSVs into SQLite (run once)
+├── validate.py            # Data-quality checks against f1.db
 ├── extract_data.py        # Runs all queries, outputs dashboard_data.json
 ├── build_dashboard.py     # Builds self-contained dashboard.html from JSON
 ├── f1.db                  # Generated SQLite database (after setup.py)
