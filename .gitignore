@@ -1,6 +1,9 @@
 # Raw data
 data/
 
+# Private logs
+QUERY_LOG.md
+
 # SQLite database
 f1.db
 
