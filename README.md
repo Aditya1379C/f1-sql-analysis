@@ -5,6 +5,20 @@ Covers driver performance, constructor battles, qualifying trends, pit stop stra
 
 ---
 
+## Outcomes
+
+Built an end-to-end data project from raw CSVs to a fully interactive dashboard, demonstrating the full analytics workflow: data modeling, SQL querying, Python-based ETL, and frontend visualization.
+
+**SQL depth:** Wrote 17 queries spanning aggregation, window functions (`RANK() OVER`, `PARTITION BY`), multi-CTE pipelines, self-joins, and conditional column splits with `SUM(CASE WHEN)`. Tackled real data quirks like detecting DNFs from status strings and matching nationality to circuit country for home race analysis.
+
+**Pipeline:** Built a Python ETL layer (`extract_data.py`) that runs all queries against SQLite and exports structured JSON, then a separate build script (`build_dashboard.py`) that generates a fully self-contained HTML dashboard with no server or external dependencies.
+
+**Dashboard:** The output is a single HTML file anyone can open in a browser. It supports per-season filtering across all 6 views, a dynamic hero stat that reacts to the current view and selected year, side-by-side driver comparison, and Chart.js visualizations including a stacked bar chart and cumulative line chart.
+
+**Dataset scale:** 15 seasons of race data (2010-2024), covering 300+ race weekends, across 11 database tables from the Ergast F1 dataset.
+
+---
+
 ## What This Project Does
 
 17 SQL queries across 6 analytical modules, written in SQLite and organized by topic. All queries are logged in `QUERY_LOG.md` alongside mistakes made and patterns learned.
