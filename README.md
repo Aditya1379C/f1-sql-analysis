@@ -1,4 +1,4 @@
-# Formula 1 CHampionship Analysis using SQL (Modern Era: 2010-2024)
+# Formula 1 Championship Analysis using SQL (Modern Era: 2010-2024)
 
 SQL-based analysis of Formula 1 race data using the Ergast F1 dataset.
 Covers driver performance, constructor battles, qualifying trends, pit stop strategy, championship battles, and circuit analysis, all visualized in an interactive self-contained dashboard.
